@@ -1,0 +1,3 @@
+[submodule "src/python/uPyLora"]
+	path = src/python/uPyLora
+	url = https://github.com/reillybeacom/uPyLora
