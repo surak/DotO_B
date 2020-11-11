@@ -1,7 +1,8 @@
 # boot.py
 
-ssid_ = "ElkabongFonGanso"
-wpa2_pass = "kkkjihgfedcba"
+# secrets expects two variables set: ssid and wpa2_pass
+
+from secrets import *
 
 
 def do_connect():
@@ -10,7 +11,7 @@ def do_connect():
     if not sta_if.isconnected():
         print('connecting to network...')
         sta_if.active(True)
-        sta_if.connect(ssid_, wpa2_pass)
+        sta_if.connect(ssid, wpa2_pass)
         while not sta_if.isconnected():
             pass
     print('network config:', sta_if.ifconfig())
